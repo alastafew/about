@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Alex Astafyev — Application Engineer and Control Systems Specialist. AV/UC systems, product support, hardware integrations and automation.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<title>Alex Astafyev | Application Engineer &amp; Control Systems Specialist</title>
+<style>
+:root{
+  --bg:#ffffff;
+  --paper:#ffffff;
+  --surface:#f9f9fb;
+  --surface-tint:#f0eaf8;
+  --ink:#1d1d1f;
+  --ink-strong:#000000;
+  --role:#515154;
+  --lead:#33434e;
+  --list:#40515c;
+  --muted:#6b6b70;
+  --line:#e5e5ea;
+  --border-btn:#c6c6c8;
+  --accent:#7b4f9e;
+  --accent-hover:#5a2e8a;
+  --pill-ink:#5a2e8a;
+  --brand-grad:linear-gradient(135deg,#5a3087,#9b6fc7);
+  --shadow:0 5px 20px rgba(20,37,50,.04);
+  --max:1080px;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0d1117;
+    --paper:#161b22;
+    --surface:#161b22;
+    --surface-tint:#1f192b;
+    --ink:#f0f6fc;
+    --ink-strong:#ffffff;
+    --role:#c9d1d9;
+    --lead:#c9d1d9;
+    --list:#b1bac4;
+    --muted:#8b949e;
+    --line:#30363d;
+    --border-btn:#30363d;
+    --accent:#a371f7;
+    --accent-hover:#8957e5;
+    --pill-ink:#d2a8ff;
+    --brand-grad:linear-gradient(135deg,#b388ff,#d2a8ff);
+    --shadow:0 5px 20px rgba(0,0,0,.35);
+  }
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Helvetica,Arial,sans-serif;transition:background-color .2s,color .2s}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+header{background:var(--bg);color:var(--ink);padding:18px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:750;letter-spacing:.02em;background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.navlinks{display:flex;gap:24px;color:var(--ink);font-size:14px}
+.navlinks a:hover{color:var(--accent)}
+
+.hero{background:var(--bg);color:var(--ink);padding:82px 0 76px}
+.hero-grid{display:grid;grid-template-columns:1.55fr .8fr;gap:48px;align-items:center}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:750}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.04;letter-spacing:-.045em;margin:14px 0 18px}
+.role{font-size:clamp(19px,2.4vw,25px);color:var(--role);margin:0 0 18px}
+.intro{max-width:690px;color:var(--muted);font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:7px;font-weight:700;font-size:14px;transition:.2s}
+.primary{background:var(--accent);color:#ffffff}
+.primary:hover{background:var(--accent-hover);color:#ffffff}
+.secondary{border:1.5px solid var(--border-btn);color:var(--ink)}
+.secondary:hover{border-color:var(--accent);color:var(--ink)}
+
+.hero-card{border:1px solid var(--line);background:var(--surface);border-radius:28px;padding:25px}
+.hero-card .stat{padding:13px 0;border-bottom:1px solid var(--line)}
+.hero-card .stat:last-child{border:0}
+.stat strong{display:block;font-size:25px;line-height:1.25;color:var(--ink-strong)}
+.stat span{font-size:13px;color:var(--muted)}
+
+main{padding:34px 0 72px}
+.section{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:34px 38px;margin-bottom:20px;box-shadow:var(--shadow)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:20px}
+.section h2{font-size:22px;letter-spacing:-.025em;margin:0}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:750}
+.lead{font-size:17px;color:var(--lead);margin:0}
+.lead h3{font-size:19px;margin:0 0 8px;color:var(--ink)}
+.lead p{margin:0;color:var(--muted);font-size:16px}
+
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.pill{background:var(--surface-tint);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;color:var(--pill-ink)}
+
+.timeline{display:grid;gap:0}
+.job{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:25px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:4px}
+.job-title{font-weight:750;font-size:16px;line-height:1.4}
+.job-sub{font-size:13px;color:var(--muted);margin-top:7px}
+.job ul{margin:0;padding-left:19px;color:var(--list)}
+.job li{padding:0 0 8px 4px}
+.job li:last-child{padding-bottom:0}
+
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 34px}
+.skill h3{font-size:14px;margin:0 0 8px}
+.skill p{margin:0;color:var(--muted);font-size:14px}
+.certs{color:var(--muted);font-size:14px;margin:0}
+
+.contact{background:var(--surface-tint);border:1px solid var(--line);border-radius:12px;padding:32px 38px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.contact h2{margin:0 0 5px;font-size:22px}
+.contact p{margin:0;color:var(--muted)}
+.contact .btn{background:var(--accent);color:#fff;white-space:nowrap}
+.contact .btn:hover{background:var(--accent-hover);color:#fff}
+
+footer{padding:30px 0 36px;color:var(--muted);font-size:12px;text-align:center;background:var(--surface-tint);border-top:1px solid var(--line)}
+
+@media(max-width:760px){
+  .hero{padding:58px 0}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-card{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .hero-card .stat{border:0;padding:0}
+  .hero-card .stat strong{font-size:21px;color:var(--ink)}
+  .navlinks{gap:13px}
+  .navlinks a:nth-child(2){display:none}
+  .section{padding:27px 23px}
+  .job{grid-template-columns:1fr;gap:12px}
+  .skills-grid{grid-template-columns:1fr}
+  .contact{align-items:flex-start;flex-direction:column}
+}
+
+@media(max-width:440px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .navlinks{font-size:12px;gap:10px}
+  .hero h1{font-size:43px}
+  .hero-card{padding:18px 14px}
+  .hero-card .stat strong{font-size:18px}
+  .hero-card .stat span{font-size:11px;color:var(--muted)}
+  .section{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">About Me</a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Application Engineering · AV / UC · Control Systems</div>
+      <h1>Alex Astafyev</h1>
+      <p class="role">Application Engineer &amp; Control Systems Specialist</p>
+      <p class="intro">I help teams make complex AV and collaboration systems work reliably — through product-level technical support, practical integrations, clear documentation and thoughtful automation.</p>
+      <div class="actions">
+        <a class="btn secondary" href="mailto:alexastafew@gmail.com">Get in touch</a>
+        <a class="btn secondary" href="https://github.io" target="_blank" rel="noopener">My App</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Career highlights">
+      <div class="stat"><strong>10+ years</strong><span>AV / control systems experience</span></div>
+      <div class="stat"><strong>40+ rooms</strong><span>Unified control ecosystem</span></div>
+      <div class="stat"><strong>25+ drivers</strong><span>Personal hardware driver library</span></div>
+    </aside>
+  </div>
+</section>
+<main class="wrap">
+  <section class="section" id="about">
+    <div class="section-head"><h2>About</h2><span class="kicker">Profile</span></div>
+    <p class="lead">Application Engineer and control systems specialist with 10+ years of experience supporting Crestron, Extron and Kramer systems, troubleshooting complex AV/UC environments, and helping integrators and clients apply products correctly. I combine hands-on product knowledge with strong troubleshooting, documentation and client-facing skills. I also build iOS software and hardware drivers as a personal project, exploring device protocols and APIs end to end.</p>
+    <div class="pills">
+      <span class="pill">Worldwide Open</span><span class="pill">Remote</span><span class="pill">English · B2</span>
+    </div>
+  </section>
+
+  <section class="section" id="featured">
+    <div class="section-head"><h2>Featured project</h2><span class="kicker">Build · Integrate · Maintain</span></div>
+    <div class="lead">
+      <div>
+        <h3>Personal iOS Application &amp; Hardware Drivers Library</h3>
+        <p>Designed and built a SwiftUI iOS application backed by a growing library of hardware drivers. The project demonstrates end-to-end integration with hardware control protocols and third-party APIs, including VISCA, PJLink and REST. The library currently includes 25+ drivers, with new drivers added regularly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-head"><h2>Professional experience</h2><span class="kicker">Career progression</span></div>
+    <div class="timeline">
+      <article class="job">
+        <div><div class="job-title">Senior Programmer<br>Control System Engineer</div><div class="job-sub">Senior engineering &amp; technical leadership</div></div>
+        <ul>
+          <li>Developed an AV equipment installation automation script, reducing commissioning time by 50%.</li>
+          <li>Integrated multi-vendor equipment — including Biamp, Shure, matrix switchers and video walls — into a centralized control ecosystem standardizing operation across 40+ rooms.</li>
+          <li>Served as the technical point of contact for clients and integrators, troubleshooting complex multi-vendor issues. Audited manufacturer APIs and documentation, identifying bugs and discrepancies before they could disrupt installations.</li>
+          <li>Provided remote and on-site enterprise support; remote diagnostics scripts reduced average incident response time from 2 hours to 1 hour.</li>
+          <li>Mentored and onboarded junior engineers, conducted code reviews and developed internal control-system programming standards.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div><div class="job-title">Control System Programmer<br>UI Developer</div><div class="job-sub">Programming · Interface design · Delivery</div></div>
+        <ul>
+          <li>Programmed Crestron and Extron control systems for 20+ multimedia and video-conferencing rooms across corporate and government projects.</li>
+          <li>Designed touch-panel interfaces in VTPro-e, standardizing user experiences across rooms.</li>
+          <li>Consolidated colleagues’ driver data into a unified, structured database, improving development speed and reducing file-search time.</li>
+          <li>Performed commissioning, acceptance testing and as-built documentation; maintained configuration backups across customer sites.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div><div class="job-title">Programmer Assistant</div><div class="job-sub">Installation · Commissioning · Support</div></div>
+        <ul>
+          <li>Installed, cabled and configured multimedia, video-conferencing and structured-cabling systems at 20+ customer sites.</li>
+          <li>Supported control-system programming and configured DSPs, matrix switchers and AV equipment under senior engineers.</li>
+          <li>Executed on-site commissioning, testing and troubleshooting.</li>
+          <li>Created as-built documentation and trained 20+ end users on system operation.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-head"><h2>Skills &amp; technology</h2><span class="kicker">Technical toolkit</span></div>
+    <div class="skills-grid">
+      <div class="skill"><h3>Control systems &amp; platforms</h3><p>Crestron · Extron · Kramer · iOS · Zoom Rooms · Microsoft Teams Rooms · Cisco Webex</p></div>
+      <div class="skill"><h3>Programming &amp; APIs</h3><p>JavaScript · SIMPL · SIMPL+ · SwiftUI · REST APIs · WebSocket · TCP/IP · Serial</p></div>
+      <div class="skill"><h3>Protocols &amp; AV networking</h3><p>VISCA · PJLink · AV-over-IP · Switch configuration · Multicast · QoS · Dante (Controller, routing, clocking) · LAN / WLAN</p></div>
+      <div class="skill"><h3>Hardware ecosystem</h3><p>Biamp · Shure (MXA series) · Symetrix · BSS · Matrix switchers · Video walls (Samsung, Absen, SiliconCore, Novastar) · PTZ cameras · Projectors</p></div>
+      <div class="skill"><h3>Technical &amp; client-facing</h3><p>Product support · Troubleshooting · Pre-sales support · Customer and partner training · Technical documentation · Remote diagnostics</p></div>
+      <div class="skill"><h3>Engineering collaboration</h3><p>Cross-functional collaboration · Code standards and reviews · Mentoring · Knowledge sharing · Enterprise AV/UC</p></div>
+    </div>
+    <div style="border-top:1px solid var(--line);margin-top:25px;padding-top:20px">
+      <h3 style="font-size:14px;margin:0 0 8px">Selected certifications · 2016–<span class="current-year">2026</span></h3>
+      <p class="certs">Crestron (P301, P201, P101) · Extron Control Specialist · Kramer (Programmer, Designer, AV Specialist, AV over IP) · AVIXA CTS-I · Dante Levels 1–3 · Biamp Tesira FORTE · Absen · Shure (IMX P300 / MXA Series)</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div><h2>Let’s connect</h2><p>Available for fully remote opportunities in application engineering, product support and control systems.</p></div>
+    <a class="btn" href="mailto:alexastafew@gmail.com">Text Me</a>
+  </section>
+</main>
+<footer><div class="wrap">© <span id="year">2026</span> Alex Astafyev · <a href="https://github.io" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
